@@ -1,0 +1,33 @@
+header{
+    display: flex;
+flex-direction: row;
+gap: 10px; 
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    /* grid-template-rows: repeat(1,auto); */
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+list-style-type: none;
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+.menu-item{
+
+}
+.link-item{
+text-decoration: none;
+}
+button{
+    background-color: #64dfdf;
+    color: black;
+    border-radius: 40%;
+    font-weight: bold;
+}
+body{
+    background-image: url('pic/bgOne.jpg');
+    }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Right Think</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="x">
+          <i class="logo"></i>
+          <div class="theme">
+            <label>theme</label>
+            <select id="theme">
+              <option value="light"><i id="lightTheme"></i></option>
+              <option value="dark"><i id="DarkTheme"></i></option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#" class="link-item">Home </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="link-item">About</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="link-item">Lala</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="link-item">Bas lhon</a>
+            </li>
+            
+          </ul>
+          <button>login</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first">
+        <div class="container">
+          <div class="login">
+            <form action="" method="post">
+              <div class="define-input">
+                <label for="login-email">Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter Your email"
+                  id="login-email"
+                />
+              </div>
+              <div class="define-input">
+                <label for="login-password">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Your Password"
+                  id="login-password"
+                />
+              </div>
+              <button>Login</button>
+            </form>
+          </div>
+          <div class="register">
+            <form action="" method="post">
+              <div class="define-input">
+                <label for="register-firstName">First Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Your First Name"
+                  id="register-firstName"
+                />
+              </div>
+              <div class="define-input">
+                <label for="register-lastName">Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Last Name"
+                  id="register-lastName"
+                />
+              </div>
+              <div class="define-input">
+                <label for="register-email">Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  id="register-email"
+                />
+              </div>
+              <div class="define-input">
+                <label for="register-password">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Your Password"
+                  id="register-password"
+                />
+              </div>
+              <div class="define-input">
+                <label for="register-confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Your Confirm Password"
+                  id="register-confirmPassword"
+                />
+              </div>
+              <button>Register</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="second">
+        <h2>What Do You Mind</h2>
+        <div class="container">
+          <div>
+            <form action="" method="post">
+              <div class="define-input">
+                <label for="title-idea">Title</label>
+                <input type="text" placeholder="Enter Idea" id="title-idea" />
+              </div>
+              <div class="define-input">
+                <label for="description-idea">Description</label>
+                <textarea id="description-idea" cols="3" rows="3"></textarea>
+              </div>
+              <div class="define-input">
+                <label for="from-date">From </label>
+                <input type="date" id="from-date" />
+              </div>
+              <div class="define-input">
+                <label for="to-date">To </label>
+                <input type="date" id="to-date" />
+              </div>
+              <div class="buttons">
+                <button id="addStep">Add Step</button>
+                <button id="finish">Finish</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="third">
+        <div class="grid">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3>Idiea</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Minima totam, recusandae asperiores earum quam exercitationem.
+                  Sunt neque earum vero eveniet!
+                </p>
+              </div>
+              <div>
+                <button id="edit">Edit</button>
+                <button id="delete">Delete</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="list-step">
+                <li class="step">
+                  <input
+                    type="text"
+                    id="stepOne"
+                    value="Read For css3"
+                    disabled
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <button id="addStep">Add Step</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div>
+          <ul class="footer-menu">
+            <li class="footer-item">
+              <h4>support@rightThink.com</h4>
+            </li>
+          </ul>
+        </div>
+        <div><i></i> <a></a></div>
+        <div>
+          <h3>Contact Us</h3>
+          <h4>Phone</h4>
+          <h4>Address</h4>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
