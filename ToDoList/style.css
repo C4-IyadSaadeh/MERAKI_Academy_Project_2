@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* color: rgb(255, 255, 255); */
+/* background-color: cyan; */
+}
+body{
+background-image: url('pic/bgOne.jpg');
+}
+nav{
+
+}
+header{
+    /* background-color: black; */
+    
+}
+.container{
+    color:white;
+}
+.menu{
+list-style: none;
+}
+.menu-item{
+
+}
+.item-link{
+text-decoration-color: brown;
+
+}
+@keyframes TDC {
+    from{text-decoration-color: rgb(248, 0, 0);}
+    to {text-decoration-color: yellow;}
+}
+.item-link:hover{
+    animation: TDC 3s;
+}
