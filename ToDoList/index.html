@@ -1,49 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>To Do List</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do</title>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="container">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="#firstSection" class="item-link">First</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#SecondSection" class="item-link">Second</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#threeSection" class="item-link">three</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#fourSection" class="item-link">four</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#fiveSection" class="item-link">five</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
+      <div class="logo"><h1>Good<span>Idea</span></h1></div>
+      
+        <h2 class="theme">
+          <span id="darkSpan">Dark</span>
+          <span id="fasla">|</span>
+          <span id="lightSpan">Light</span></h2>
+        
+          <!-- <i class="far fa-moon" style="font-size:24px; color: brown;"></i>
+                <i class="fa fa-light" ></i>
+                <i id="DarkTheme"></i> -->
+        </div>
+      </div>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#hero" class="link-item">Home </a>
+        </li>
+        <li class="menu-item">
+          <a href="#second" class="link-item">About</a>
+        </li>
+        
+      </ul>
+      <button><a href="#first" class="link-item">login</a></button>
     </header>
     <main>
-        <section class="first" id="firstSection">
-            <div>
-                <h2>What Will You Do ? </h2>
-                <input type="text"  id="txt">
-                <button id="btn">Add</button>
-                <div id="test"></div>
+      <section class="hero" id='hero'>
+        <h1>The idea of the site is that you can arrange your ideas and implement them in an easier and faster way, 
+          and you can develop on it. All people have ideas, but not all people analyze the idea into parts and plan
+           to implement the <strong>idea</strong> .
+           I worked here. You write the idea and analyze it at your convenience and initially plan to make it</h1>
+           
+      </section>
+      <section class="first" id="first" >
+        <div class="first-container">
+          <div class="login">
+            <h2>SignIN</h2>
+            <div id="signUp">
+              <h3>Donit have an account?</h3>
+              <button id="btnSignUp">SignUp</button>
             </div>
-        </section>
+
+            <div class="define-input">
+              <input type="email" placeholder="Email" id="loginEmail" />
+            </div>
+
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Password"
+                id="loginPassword"
+              />
+            </div>
+            <button id="btnSignIn">SignIN</button>
+          </div>
+          <div class="register">
+            <div class="define-input">
+              <input
+                type="text"
+                placeholder=" First Name"
+                id="registerFirstName"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="text"
+                placeholder=" Last Name"
+                id="registerLastName"
+              />
+            </div>
+            <div class="define-input">
+              <input type="email" placeholder=" Email" id="registerEmail" />
+            </div>
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Password"
+                id="registerPassword"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Confirm Password"
+                id="registerConfirmPassword"
+              />
+            </div>
+            <button id="btnRegister">Register</button>
+          </div>
+        </div>
+      </section>
+      <section class="second">
+        
+        <div class="second-container" id="second">
+          <h2>What's on your mind?</h2>
+          <div class="one">
+            <div class="define-input">
+              <input type="text" placeholder="What Do You Do" id="titleIdea" />
+            </div>
+            <div class="define-input">
+              <textarea
+                id="descriptionIdea"
+                placeholder="Description"
+                cols="25"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="two">
+            <div class="define-input">
+              <label for="from-date">From </label>
+              <input type="date" id="fromDate" />
+            </div>
+            <div class="define-input">
+              <label for="to-date">To </label>
+              <input type="date" id="toDate" />
+            </div>
+          </div>
+<div class="three">
+  <div class="define-input" id='addstps'>
+
+  </div>
+</div>
+          <div class="buttons">
+            <button id="addStep">Add Step</button>
+            <button id="finish">Finish</button>
+          </div>
+        </div>
+      </section>
+      <section class="third">
+        <div class="third-container">
+          <div class="card" id="EditCard">
+            <div class="card-header">
+              <div>
+                <input type="text"  id="title">
+                <textarea
+                id="description"
+                placeholder="Description"
+                cols="25"
+                rows="3"
+              ></textarea>
+                
+              </div>
+              
+            </div>
+            
+              
+            
+            <div class="card-footer">
+             
+              <button id="Done">Done</button>
+              <button id="delete">Delete</button>
+            </div>
+          </div>
+         
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <ul class="footer-menu">
+          <li class="footer-item">
+            <h3>Support</h3> <br>
+            <h5>support@GoodIdea.com</h5>
+          </li>
+        </ul>
+  
+        <div class="logo"><h1>Good<span>Idea</span></h1></div>
+        <div>
+          <h3>Contact Us</h3><br>
+          <h5>iyaadsaadeh@gmail.com</h5> <br>
+          <h5>Amman-jordan</h5>
+        </div>
+      </div>
+    </footer>
     <script src="main.js"></script>
-</body>
+  </body>
+  
 </html>
