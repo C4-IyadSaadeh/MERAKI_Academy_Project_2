@@ -74,6 +74,9 @@ header{
     color:#285670 ;
     text-transform: uppercase; 
 }
+ul{
+list-style-type: none;
+}
 .logo h1 span{
     color:#429ca7 ;
     text-transform: uppercase; 

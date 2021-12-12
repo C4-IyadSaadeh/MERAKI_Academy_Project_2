@@ -96,7 +96,7 @@ btnFinish.on("click", () => {
       title: titleIdea.val(),
       Description: descriptionIdea.val(),
       from: fromDate.val(),
-      to: toDate.val(),state:'pendening'
+      to: toDate.val(),state:'Pending',step:{}
     });
     let item = JSON.parse(data.getItem("items"));
     data.setItem("items", JSON.stringify(items));
@@ -137,6 +137,7 @@ const viewNotes=()=>{
         const header = $(
           `<div><h3>${element.title}</h3><p>${element.Description}</p></div>`
         );
+        const body=$(``);
         const footerOne = $(`<button id="modifyStep">Add Step</button>`);
         const footertwo = $(`<button id="update">Edit</button>`);
         const footerthree = $(`<button id="delete">Delete</button>`);
