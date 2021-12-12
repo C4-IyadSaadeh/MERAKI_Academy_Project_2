@@ -1,3 +1,4 @@
+/* 
 header{
     display: flex;
 flex-direction: row;
@@ -6,7 +7,7 @@ gap: 10px;
 .container{
     display: grid;
     grid-template-columns: repeat(4,auto);
-    /* grid-template-rows: repeat(1,auto); */
+    grid-template-rows: repeat(1,auto);
     justify-content: center;
     align-items: center;
 }
@@ -27,7 +28,54 @@ button{
     color: black;
     border-radius: 40%;
     font-weight: bold;
+} */
+html {
+  background-image: url("pic/bgOne.jpg");
 }
-body{
-    background-image: url('pic/bgOne.jpg');
-    }
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    gap: 10px;
+    
+}
+header{
+    background-color: #c8b6ad;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.menu-item{
+
+}
+.link-item{
+    text-decoration: none;
+    font-size: 20px;
+}
+#lightTheme{
+    image: url('pic/moon.png');
+}
+/* first Section */
+.first-container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+

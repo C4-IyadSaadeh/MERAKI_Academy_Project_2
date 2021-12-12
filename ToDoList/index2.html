@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -14,19 +15,17 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="x">
-          <i class="logo"></i>
-          <div class="theme">
+        <i class="logo"></i>
+        <div class="theme">
             <label>theme</label>
-            <select id="theme">
-              <option value="light"><i id="lightTheme"></i></option>
-              <option value="dark"><i id="DarkTheme"></i></option>
-            </select>
+            <div>
+                <!-- <i class="far fa-moon" style="font-size:24px; color: brown;"></i>
+                <i class="fa fa-light" ></i>
+                <i id="DarkTheme"></i> -->
+            </div>
+            
           </div>
-        </div>
-        <div>
-          <ul class="menu">
+        <ul class="menu">
             <li class="menu-item">
               <a href="#" class="link-item">Home </a>
             </li>
@@ -42,14 +41,13 @@
             
           </ul>
           <button>login</button>
-        </div>
-      </div>
+     
     </header>
     <main>
       <section class="first">
-        <div class="container">
+        <div class="first-container">
           <div class="login">
-            <form action="" method="post">
+            
               <div class="define-input">
                 <label for="login-email">Email</label>
                 <input
@@ -67,10 +65,10 @@
                 />
               </div>
               <button>Login</button>
-            </form>
+           
           </div>
           <div class="register">
-            <form action="" method="post">
+            
               <div class="define-input">
                 <label for="register-firstName">First Name</label>
                 <input
@@ -112,15 +110,15 @@
                 />
               </div>
               <button>Register</button>
-            </form>
+            
           </div>
         </div>
       </section>
       <section class="second">
         <h2>What Do You Mind</h2>
-        <div class="container">
+        <div class="second-container">
           <div>
-            <form action="" method="post">
+            
               <div class="define-input">
                 <label for="title-idea">Title</label>
                 <input type="text" placeholder="Enter Idea" id="title-idea" />
@@ -141,12 +139,12 @@
                 <button id="addStep">Add Step</button>
                 <button id="finish">Finish</button>
               </div>
-            </form>
+           
           </div>
         </div>
       </section>
       <section class="third">
-        <div class="grid">
+        <div class="third-container">
           <div class="card">
             <div class="card-header">
               <div>
@@ -182,7 +180,7 @@
       </section>
     </main>
     <footer>
-      <div class="container">
+      <div class="footer-container">
         <div>
           <ul class="footer-menu">
             <li class="footer-item">
