@@ -20,5 +20,9 @@ btn.on('click',()=>{
     const header=$(`<h1>${data}</h1>`);
     header.appendTo(test);
 });
+// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+// localStorage.setItem('testObject', JSON.stringify(testObject));
+// data.clear();
 // console.log(data.key());
+
 
