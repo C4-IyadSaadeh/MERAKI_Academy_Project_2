@@ -64,28 +64,28 @@ btnSignIn.on("click", () => {
 });
 // btnSignUp.on('click',()=>{});
 
-btnRegister.on("click", () => {
-  if (
-    registerFirstName.val() !== "" &&
-    registerLastName.val() !== "" &&
-    registerEmail.val() !== "" &&
-    registerPassword.val() !== "" &&
-    registerConfirmPassword.val() !== ""
-  ) {
-    if (registerPassword.val() === registerConfirmPassword.val()) {
-      users.push({
-        firstName: registerFirstName.val(),
-        lastName: registerLastName.val(),
-        email: registerEmail.val(),
-        password: registerPassword.val(),
-      });
-      data.setItem("users", JSON.stringify(users));
-      alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
-    } else {
-      alert("The Password not match for Confirm Password Please Try Agin!");
-    }
-  }
-});
+// btnRegister.on("click", () => {
+//   if (
+//     registerFirstName.val() !== "" &&
+//     registerLastName.val() !== "" &&
+//     registerEmail.val() !== "" &&
+//     registerPassword.val() !== "" &&
+//     registerConfirmPassword.val() !== ""
+//   ) {
+//     if (registerPassword.val() === registerConfirmPassword.val()) {
+//       users.push({
+//         firstName: registerFirstName.val(),
+//         lastName: registerLastName.val(),
+//         email: registerEmail.val(),
+//         password: registerPassword.val(),
+//       });
+//       data.setItem("users", JSON.stringify(users));
+//       alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
+//     } else {
+//       alert("The Password not match for Confirm Password Please Try Agin!");
+//     }
+//   }
+// });
 btnFinish.on("click", () => {
   if (
     titleIdea.val() !== "" &&
@@ -93,12 +93,12 @@ btnFinish.on("click", () => {
     fromDate.val() !== "" &&
     toDate.val() !== ""
   ) {
-    btnAddStep.on('click',()=>{
+    // btnAddStep.on('click',()=>{
         
-        const defineInput=$(`#addstps`);
+    //     const defineInput=$(`#addstps`);
         
-        step.appendTo(defineInput);
-    });
+    //     step.appendTo(defineInput);
+    // });
     items.push({
       title: titleIdea.val(),
       Description: descriptionIdea.val(),
