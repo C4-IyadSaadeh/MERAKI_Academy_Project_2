@@ -128,4 +128,22 @@ button{
     gap: 30px;
     
 }
+/* Thrid Section */
+.third-container{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+}
+.card{
+border: solid 1px;
+/* display: flex;
+flex-direction: column; */
+/* flex-wrap: wrap; */
+}
+.card-header{
+    border: solid 1px;
+    
+}
+.card-footer{
+    border: solid 1px;
+}
 
