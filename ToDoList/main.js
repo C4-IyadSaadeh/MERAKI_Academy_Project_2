@@ -98,6 +98,7 @@ btnFinish.on("click", () => {
       from: fromDate.val(),
       to: toDate.val(),
     });
+    let item = JSON.parse(data.getItem("items"));
     data.setItem("items", JSON.stringify(items));
   }
   for (const key in item) {
