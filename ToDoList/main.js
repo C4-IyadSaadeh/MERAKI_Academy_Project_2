@@ -43,6 +43,8 @@ const btnDelete=$('#delete');
 
 let users =[];
 let user=JSON.parse(data.getItem('users'));
+let items=[];
+let item = JSON.parse(data.getItem('items'));
 btnSignIn.on('click',()=>{
     if (loginEmail.val()!=='' || loginPassword.val()!=='') {
         for (const key in user) {
@@ -73,6 +75,18 @@ btnRegister.on('click',()=>{
         }
         else{
             alert('The Password not match for Confirm Password Please Try Agin!');
+        }
+    }
+});
+btnFinish.on('click',()=>{
+    if (titleIdea.val()!=='' && descriptionIdea.val()!=='' && fromDate.val()!=='' && toDate.val()!=='') {
+        items.push({title:titleIdea.val(),Description:descriptionIdea.val(),from:fromDate.val(),to:toDate.val()});
+            data.setItem('items',JSON.stringify(items));
+    }
+    for (const key in item) {
+        if (Object.hasOwnProperty.call(item, key)) {
+            const element = item[key];
+            
         }
     }
 });
