@@ -12,7 +12,7 @@
 //theme
 const data = localStorage;
 // data.clear();
-
+const body=$('body');
 const darkSpan = $("#darkSpan");
 const lightSpan = $("#lightSpan");
 //login
@@ -124,6 +124,32 @@ btnFinish.on("click", () => {
     card.appendTo(thridSection);
   }
 });
+const fun=()=>{
+    for (const key in item) {
+        const element = item[key];
+        const card = $('<div class="card"></div>');
+        const cardHeader = $('<div class="card-header"></div>');
+        const cardBody = $('<div class="card-body"></div>');
+        const cardFooter = $('<div class="card-footer"></div>');
+    
+        // review index2 in div cardheader
+        const header = $(
+          `<div><h3>${element.title}</h3><p>${element.Description}</p></div>`
+        );
+        const footerOne = $(`<button id="modifyStep">Add Step</button>`);
+        const footertwo = $(`<button id="update">Edit</button>`);
+        const footerthree = $(`<button id="delete">Delete</button>`);
+        header.appendTo(cardHeader);
+        footerOne.appendTo(cardFooter);
+        footertwo.appendTo(cardFooter);
+        footerthree.appendTo(cardFooter);
+        cardHeader.appendTo(card);
+        cardBody.appendTo(card);
+        cardFooter.appendTo(card);
+        card.appendTo(thridSection);
+      }
+};
+body.on("laod",fun());
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');
