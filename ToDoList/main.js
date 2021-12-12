@@ -64,28 +64,28 @@ btnSignIn.on("click", () => {
 });
 // btnSignUp.on('click',()=>{});
 
-// btnRegister.on("click", () => {
-//   if (
-//     registerFirstName.val() !== "" &&
-//     registerLastName.val() !== "" &&
-//     registerEmail.val() !== "" &&
-//     registerPassword.val() !== "" &&
-//     registerConfirmPassword.val() !== ""
-//   ) {
-//     if (registerPassword.val() === registerConfirmPassword.val()) {
-//       users.push({
-//         firstName: registerFirstName.val(),
-//         lastName: registerLastName.val(),
-//         email: registerEmail.val(),
-//         password: registerPassword.val(),
-//       });
-//       data.setItem("users", JSON.stringify(users));
-//       alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
-//     } else {
-//       alert("The Password not match for Confirm Password Please Try Agin!");
-//     }
-//   }
-// });
+btnRegister.on("click", () => {
+  if (
+    registerFirstName.val() !== "" &&
+    registerLastName.val() !== "" &&
+    registerEmail.val() !== "" &&
+    registerPassword.val() !== "" &&
+    registerConfirmPassword.val() !== ""
+  ) {
+    if (registerPassword.val() === registerConfirmPassword.val()) {
+      users.push({
+        firstName: registerFirstName.val(),
+        lastName: registerLastName.val(),
+        email: registerEmail.val(),
+        password: registerPassword.val(),
+      });
+      data.setItem("users", JSON.stringify(users));
+      alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
+    } else {
+      alert("The Password not match for Confirm Password Please Try Agin!");
+    }
+  }
+});
 btnFinish.on("click", () => {
   if (
     titleIdea.val() !== "" &&
@@ -172,7 +172,8 @@ const viewNotes=()=>{
 body.on("laod",viewNotes());
 btnDelete.on('click',()=>{
     data.removeItem('items');
-})
+});
+
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');
