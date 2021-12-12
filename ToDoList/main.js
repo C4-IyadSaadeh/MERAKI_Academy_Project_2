@@ -151,7 +151,7 @@ const viewNotes=()=>{
         const footerthree = $(`<button id="delete">Delete</button>`);
         header.appendTo(cardHeader);
         // bady.appendTo(cardBody);
-        footerOne.appendTo(cardFooter);
+        // footerOne.appendTo(cardFooter);
         footertwo.appendTo(cardFooter);
         // footerthree.appendTo(cardFooter);
         cardHeader.appendTo(card);
@@ -163,14 +163,14 @@ const viewNotes=()=>{
             editCard.show();
 
         });
-        btnDelete.on('click',()=>{
-            data.removeItem('items')
-        })
+        
       }
      
 };
 body.on("laod",viewNotes());
-
+btnDelete.on('click',()=>{
+    data.removeItem('items');
+})
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');
