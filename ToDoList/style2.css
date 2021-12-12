@@ -159,7 +159,7 @@ button{
     font-family:Georgia, 'Times New Roman', Times, serif ;
     margin-top: 20px;
 }
-.second-container .one ,.two{
+.second-container .one ,.two ,.three{
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: auto;
@@ -167,6 +167,10 @@ button{
     align-items: center;
     gap: 30px;
     
+}
+#addstps{
+    display: flex;
+    flex-direction: column;
 }
 textarea {
     width: 100%;
@@ -196,10 +200,11 @@ margin: 10px;
 background-color: rgb(255 247 0 / 65%);
 box-shadow:4px 4px gray;
 border-top-right-radius: 4.8rem;
+height: 150px;
 }
 .card-header{
     border-bottom: solid 1px;
-    
+    margin-bottom: 50px;
     
 }
 .card-body{

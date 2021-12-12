@@ -40,7 +40,7 @@ const thridSection = $(".third-container");
 const btnModify = $("#modifyStep");
 const btnUpdate = $("#update");
 const btnDelete = $("#delete");
-
+const editCard=$('#EditCard');
 let users = [];
 let user = JSON.parse(data.getItem("users"));
 let items = [];
@@ -92,12 +92,19 @@ btnFinish.on("click", () => {
     fromDate.val() !== "" &&
     toDate.val() !== ""
   ) {
+    btnAddStep.on('click',()=>{
+        const step=$('<input type="text" placeholder="Enter Step" id="stepOne" />');
+        const defineInput=$(`#addstps`);
+        
+        step.appendTo(defineInput);
+    });
     items.push({
       title: titleIdea.val(),
       Description: descriptionIdea.val(),
       from: fromDate.val(),
-      to: toDate.val(),state:'Pending',step:{}
+      to: toDate.val(),state:'Pending',step:{step:step}
     });
+
     let item = JSON.parse(data.getItem("items"));
     data.setItem("items", JSON.stringify(items));
   }
@@ -126,6 +133,7 @@ btnFinish.on("click", () => {
   }
 });
 const viewNotes=()=>{
+    editCard.hide();
     for (const key in item) {
         const element = item[key];
         const card = $('<div class="card"></div>');
@@ -137,24 +145,32 @@ const viewNotes=()=>{
         const header = $(
           `<div><h3>${element.title}</h3><p>${element.Description}</p></div>`
         );
-        const body=$(``);
-        const footerOne = $(`<button id="modifyStep">Add Step</button>`);
+        // const bady=$(`<p>${element.Description}</p>`);
+        // const footerOne = $(`<button id="modifyStep">Add Step</button>`);
         const footertwo = $(`<button id="update">Edit</button>`);
         const footerthree = $(`<button id="delete">Delete</button>`);
         header.appendTo(cardHeader);
+        // bady.appendTo(cardBody);
         footerOne.appendTo(cardFooter);
         footertwo.appendTo(cardFooter);
-        footerthree.appendTo(cardFooter);
+        // footerthree.appendTo(cardFooter);
         cardHeader.appendTo(card);
-        cardBody.appendTo(card);
+        // cardBody.appendTo(card);
         cardFooter.appendTo(card);
         card.appendTo(thridSection);
+        footerthree.appendTo(thridSection);
+        btnModify.on('click',()=>{
+            editCard.show();
+
+        });
+        btnDelete.on('click',()=>{
+            data.removeItem('items')
+        })
       }
+     
 };
 body.on("laod",viewNotes());
-btnAddStep.on('click',()=>{
-    const step=$('<input type="text" id="stepOne" />')
-});
+
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');

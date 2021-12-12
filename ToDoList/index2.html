@@ -139,7 +139,11 @@
               <input type="date" id="toDate" />
             </div>
           </div>
+<div class="three">
+  <div class="define-input" id='addstps'>
 
+  </div>
+</div>
           <div class="buttons">
             <button id="addStep">Add Step</button>
             <button id="finish">Finish</button>
@@ -148,36 +152,30 @@
       </section>
       <section class="third">
         <div class="third-container">
-          <div class="card">
+          <div class="card" id="EditCard">
             <div class="card-header">
               <div>
-                <h3>Idea</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minima totam, recusandae asperiores earum quam exercitationem.
-                  Sunt neque earum vero eveniet!
-                </p>
+                <input type="text"  id="title">
+                <textarea
+                id="description"
+                placeholder="Description"
+                cols="25"
+                rows="3"
+              ></textarea>
+                
               </div>
               
             </div>
-            <div class="card-body">
-              <ul class="list-step">
-                <li class="step">
-                  <input
-                    type="text"
-                    id="stepOne"
-                    value="Read For css3"
-                    disabled
-                  />
-                </li>
-              </ul>
-            </div>
+            
+              
+            
             <div class="card-footer">
-              <button id="modifyStep">Add Step</button>
-              <button id="update">Edit</button>
+             
+              <button id="Done">Done</button>
               <button id="delete">Delete</button>
             </div>
           </div>
+         
         </div>
       </section>
     </main>
