@@ -34,6 +34,7 @@ const fromDate = $("#fromDate");
 const toDate = $("#toDate");
 const btnAddStep = $("#addStep");
 const btnFinish = $("#finish");
+const step=$('<input type="text" placeholder="Enter Step" id="stepOne" />');
 //section3
 // card card-header card-body list-step step stepOne card-footer
 const thridSection = $(".third-container");
@@ -93,7 +94,7 @@ btnFinish.on("click", () => {
     toDate.val() !== ""
   ) {
     btnAddStep.on('click',()=>{
-        const step=$('<input type="text" placeholder="Enter Step" id="stepOne" />');
+        
         const defineInput=$(`#addstps`);
         
         step.appendTo(defineInput);
@@ -132,8 +133,9 @@ btnFinish.on("click", () => {
     card.appendTo(thridSection);
   }
 });
+editCard.hide();
 const viewNotes=()=>{
-    editCard.hide();
+    
     for (const key in item) {
         const element = item[key];
         const card = $('<div class="card"></div>');
@@ -159,10 +161,10 @@ const viewNotes=()=>{
         cardFooter.appendTo(card);
         card.appendTo(thridSection);
         footerthree.appendTo(thridSection);
-        btnModify.on('click',()=>{
-            editCard.show();
+        // btnModify.on('click',()=>{
+        //     editCard.show();
 
-        });
+        // });
         
       }
      

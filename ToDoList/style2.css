@@ -29,7 +29,10 @@ button{
     border-radius: 40%;
     font-weight: bold;
 } */
-
+#delete{
+    width: 100px;
+    height: 100px;
+}
 * {
   margin: 0px;
   padding: 0px;
