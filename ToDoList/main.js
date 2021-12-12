@@ -10,6 +10,9 @@
 4. User should be able to modify any added item.
 5.Items should be categorized to [ Completed, Pending ].*/
 //theme
+const data=localStorage;
+// data.clear();
+
 const darkSpan=$('#darkSpan');
 const lightSpan=$('#lightSpan');
 //login
@@ -38,20 +41,53 @@ const btnUpdate=$('#update');
 const btnDelete=$('#delete');
 
 
-let users =[];
+let users =[
+    
+];
+btnSignIn.on('click',()=>{
+    if (loginEmail.val()!=='' || loginPassword.val()!=='') {
+        for (const key in users) {
+            
+            const element = users[key];
+            if (loginEmail.val()===element.email && loginPassword.val()===element.password) {
+                alert('WellCome');
+                console.log(loginEmail.val());
+            }
+        
+    }
+        
+    }
+    else{
+        alert('Please fill your email or password');
+        
+    }
+});
+// btnSignUp.on('click',()=>{});
+
+btnRegister.on('click',()=>{
+    if (registerFirstName.val()!=='' && registerLastName.val()!=='' && registerEmail.val()!=='' && registerPassword.val()!=='' && registerConfirmPassword.val()!=='') {
+        if (registerPassword.val()===registerConfirmPassword.val()) {
+            users.push({firstName:registerFirstName.val(),lastName:registerLastName.val(),email:registerEmail.val(),password:registerPassword.val()});
+            data.setItem('users',JSON.stringify(users))
+            alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
+        }
+        else{
+            alert('The Password not match for Confirm Password Please Try Agin!');
+        }
+    }
+});
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');
-// const data=localStorage;
+
 
 // btn.on('click',()=>{
 //     data.setItem('test',`${{name:txt.val(),age:23}}`);
 //     const header=$(`<h1>${data}</h1>`);
 //     header.appendTo(test);
 // });
-// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+// var testObject = [{ 'one': 1, 'two': 2, 'three': 3 }];
 // localStorage.setItem('testObject', JSON.stringify(testObject));
-// data.clear();
 // console.log(data.key());
 
 
