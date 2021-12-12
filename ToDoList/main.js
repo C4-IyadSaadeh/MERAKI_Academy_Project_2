@@ -9,18 +9,28 @@
 3.User should be able to delete any added item.
 4. User should be able to modify any added item.
 5.Items should be categorized to [ Completed, Pending ].*/
+//theme
+const darkSpan=$('#darkSpan');
+const lightSpan=$('#lightSpan');
+//login
 const btnSignUp=$('#btnSignUp');
 const btnSignIn=$('#btnSignIn');
 const loginEmail=$('#loginEmail');
 const loginPassword=$('#loginPassword');
 //register 
-const btnSignIn=$('#btnSignIn');
-
+const btnRegister=$('#btnRegister');
 const registerFirstName=$('#registerFirstName');
 const registerLastName=$('#registerLastName');
 const registerEmail=$('#registerEmail');
 const registerPassword=$('#registerPassword');
 const registerConfirmPassword=$('#registerConfirmPassword');
+//Section 2
+const titleIdea=$('#titleIdea');
+const descriptionIdea=$('#descriptionIdea');
+const fromDate=$('#fromDate');
+const toDate=$('#toDate');
+const btnAddStep=$('#addStep');
+const btnFinish=$('#finish');
 
 let users =[];
 // const txt=$('#txt');
