@@ -31,6 +31,12 @@ const fromDate=$('#fromDate');
 const toDate=$('#toDate');
 const btnAddStep=$('#addStep');
 const btnFinish=$('#finish');
+//section3
+// card card-header card-body list-step step stepOne card-footer
+const btnModify=$('#modifyStep');
+const btnUpdate=$('#update');
+const btnDelete=$('#delete');
+
 
 let users =[];
 // const txt=$('#txt');
