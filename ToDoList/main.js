@@ -96,7 +96,7 @@ btnFinish.on("click", () => {
       title: titleIdea.val(),
       Description: descriptionIdea.val(),
       from: fromDate.val(),
-      to: toDate.val(),
+      to: toDate.val(),state:'pendening'
     });
     let item = JSON.parse(data.getItem("items"));
     data.setItem("items", JSON.stringify(items));
@@ -125,7 +125,7 @@ btnFinish.on("click", () => {
     card.appendTo(thridSection);
   }
 });
-const fun=()=>{
+const viewNotes=()=>{
     for (const key in item) {
         const element = item[key];
         const card = $('<div class="card"></div>');
@@ -150,7 +150,10 @@ const fun=()=>{
         card.appendTo(thridSection);
       }
 };
-body.on("laod",fun());
+body.on("laod",viewNotes());
+btnAddStep.on('click',()=>{
+    const step=$('<input type="text" id="stepOne" />')
+});
 // const txt=$('#txt');
 // const btn=$('#btn');
 // const test=$('#test');
