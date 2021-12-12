@@ -11,6 +11,17 @@
 5.Items should be categorized to [ Completed, Pending ].*/
 const btnSignUp=$('#btnSignUp');
 const btnSignIn=$('#btnSignIn');
+const loginEmail=$('#loginEmail');
+const loginPassword=$('#loginPassword');
+//register 
+const btnSignIn=$('#btnSignIn');
+
+const registerFirstName=$('#registerFirstName');
+const registerLastName=$('#registerLastName');
+const registerEmail=$('#registerEmail');
+const registerPassword=$('#registerPassword');
+const registerConfirmPassword=$('#registerConfirmPassword');
+
 let users =[];
 // const txt=$('#txt');
 // const btn=$('#btn');
