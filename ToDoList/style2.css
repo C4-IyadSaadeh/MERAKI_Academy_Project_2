@@ -138,10 +138,26 @@ border: solid 1px;
 /* display: flex;
 flex-direction: column; */
 /* flex-wrap: wrap; */
+margin: 10px;
+background-color: rgba(255, 255, 255, 0.9);
 }
 .card-header{
     border: solid 1px;
     
+}
+.card-body{
+    border: solid 1px;
+}
+.card-body input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    color: black;
 }
 .card-footer{
     border: solid 1px;
