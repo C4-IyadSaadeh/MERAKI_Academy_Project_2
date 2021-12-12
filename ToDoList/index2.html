@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style2.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -15,131 +18,123 @@
   </head>
   <body>
     <header>
-        <i class="logo"></i>
-        <div class="theme">
-            <label>theme</label>
-            <div>
-                <!-- <i class="far fa-moon" style="font-size:24px; color: brown;"></i>
+      <i class="logo"></i>
+      <div class="theme">
+        <label>theme</label>
+        <div>
+          <!-- <i class="far fa-moon" style="font-size:24px; color: brown;"></i>
                 <i class="fa fa-light" ></i>
                 <i id="DarkTheme"></i> -->
-            </div>
-            
-          </div>
-        <ul class="menu">
-            <li class="menu-item">
-              <a href="#" class="link-item">Home </a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="link-item">About</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="link-item">Lala</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="link-item">Bas lhon</a>
-            </li>
-            
-          </ul>
-          <button>login</button>
-     
+        </div>
+      </div>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#" class="link-item">Home </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="link-item">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="link-item">Lala</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="link-item">Bas lhon</a>
+        </li>
+      </ul>
+      <button>login</button>
     </header>
     <main>
       <section class="first">
         <div class="first-container">
           <div class="login">
-            
-              <div class="define-input">
-                <label for="login-email">Email</label>
-                <input
-                  type="email"
-                  placeholder="Enter Your email"
-                  id="login-email"
-                />
-              </div>
-              <div class="define-input">
-                <label for="login-password">Password</label>
-                <input
-                  type="password"
-                  placeholder="Enter Your Password"
-                  id="login-password"
-                />
-              </div>
-              <button>Login</button>
-           
+            <h2>SignIN</h2>
+            <div id="signUp">
+              <h3>Donit have an account?</h3>
+              <button>SignUp</button>
+            </div>
+
+            <div class="define-input">
+              <input
+                type="email"
+                placeholder="Email"
+                id="login-email"
+              />
+            </div>
+
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Password"
+                id="login-password"
+              />
+            </div>
+            <button>SignIN</button>
           </div>
           <div class="register">
-            
-              <div class="define-input">
-                <label for="register-firstName">First Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter Your First Name"
-                  id="register-firstName"
-                />
-              </div>
-              <div class="define-input">
-                <label for="register-lastName">Last Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter Your Last Name"
-                  id="register-lastName"
-                />
-              </div>
-              <div class="define-input">
-                <label for="register-email">Email</label>
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  id="register-email"
-                />
-              </div>
-              <div class="define-input">
-                <label for="register-password">Password</label>
-                <input
-                  type="password"
-                  placeholder="Enter Your Password"
-                  id="register-password"
-                />
-              </div>
-              <div class="define-input">
-                <label for="register-confirmPassword">Confirm Password</label>
-                <input
-                  type="password"
-                  placeholder="Enter Your Confirm Password"
-                  id="register-confirmPassword"
-                />
-              </div>
-              <button>Register</button>
-            
+            <div class="define-input">
+              <input
+                type="text"
+                placeholder=" First Name"
+                id="register-firstName"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="text"
+                placeholder=" Last Name"
+                id="register-lastName"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="email"
+                placeholder=" Email"
+                id="register-email"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Password"
+                id="register-password"
+              />
+            </div>
+            <div class="define-input">
+              <input
+                type="password"
+                placeholder=" Confirm Password"
+                id="register-confirmPassword"
+              />
+            </div>
+            <button>Register</button>
           </div>
         </div>
       </section>
       <section class="second">
-        <h2>What Do You Mind</h2>
+        
         <div class="second-container">
+          <h2>What Do You Mind</h2>
           <div>
-            
-              <div class="define-input">
-                <label for="title-idea">Title</label>
-                <input type="text" placeholder="Enter Idea" id="title-idea" />
-              </div>
-              <div class="define-input">
-                <label for="description-idea">Description</label>
-                <textarea id="description-idea" cols="3" rows="3"></textarea>
-              </div>
-              <div class="define-input">
-                <label for="from-date">From </label>
-                <input type="date" id="from-date" />
-              </div>
-              <div class="define-input">
-                <label for="to-date">To </label>
-                <input type="date" id="to-date" />
-              </div>
-              <div class="buttons">
-                <button id="addStep">Add Step</button>
-                <button id="finish">Finish</button>
-              </div>
-           
+            <div class="define-input">
+              <label for="title-idea">Title</label>
+              <input type="text" placeholder="Enter Idea" id="title-idea" />
+            </div>
+            <div class="define-input">
+              <label for="description-idea">Description</label>
+              <textarea id="description-idea" cols="3" rows="3"></textarea>
+            </div>
+            <div class="define-input">
+              <label for="from-date">From </label>
+              <input type="date" id="from-date" />
+            </div>
+            <div class="define-input">
+              <label for="to-date">To </label>
+              <input type="date" id="to-date" />
+            </div>
+            <div class="buttons">
+              <button id="addStep">Add Step</button>
+              <button id="finish">Finish</button>
+            </div>
           </div>
         </div>
       </section>
