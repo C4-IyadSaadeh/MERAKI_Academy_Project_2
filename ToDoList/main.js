@@ -84,10 +84,15 @@ btnFinish.on('click',()=>{
             data.setItem('items',JSON.stringify(items));
     }
     for (const key in item) {
-        if (Object.hasOwnProperty.call(item, key)) {
+        
             const element = item[key];
-            
-        }
+        const card=$('<div class="card"></div>');
+        const cardHeader=$('<div class="card-header"></div>');
+        const cardBody=$('<div class="card-body"></div>');
+        const cardFooter=$('<div class="card-footer"></div>');
+        cardHeader.appendTo
+    
+        
     }
 });
 // const txt=$('#txt');
