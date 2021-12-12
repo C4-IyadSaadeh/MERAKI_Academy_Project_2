@@ -41,15 +41,14 @@ const btnUpdate=$('#update');
 const btnDelete=$('#delete');
 
 
-let users =[
-    
-];
+let users =[];
+let user=JSON.parse(data.getItem('users'));
 btnSignIn.on('click',()=>{
     if (loginEmail.val()!=='' || loginPassword.val()!=='') {
-        for (const key in users) {
+        for (const key in user) {
             
-            const element = users[key];
-            if (loginEmail.val()===element.email && loginPassword.val()===element.password) {
+            const element = user[key];
+            if (loginEmail.val()===element.email  && loginPassword.val()===element.password) {
                 alert('WellCome');
                 console.log(loginEmail.val());
             }
@@ -67,6 +66,7 @@ btnSignIn.on('click',()=>{
 btnRegister.on('click',()=>{
     if (registerFirstName.val()!=='' && registerLastName.val()!=='' && registerEmail.val()!=='' && registerPassword.val()!=='' && registerConfirmPassword.val()!=='') {
         if (registerPassword.val()===registerConfirmPassword.val()) {
+          
             users.push({firstName:registerFirstName.val(),lastName:registerLastName.val(),email:registerEmail.val(),password:registerPassword.val()});
             data.setItem('users',JSON.stringify(users))
             alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
