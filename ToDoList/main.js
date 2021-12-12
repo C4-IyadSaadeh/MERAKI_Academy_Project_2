@@ -9,20 +9,23 @@
 3.User should be able to delete any added item.
 4. User should be able to modify any added item.
 5.Items should be categorized to [ Completed, Pending ].*/
+const btnSignUp=$('#btnSignUp');
+const btnSignIn=$('#btnSignIn');
+let users =[];
+// const txt=$('#txt');
+// const btn=$('#btn');
+// const test=$('#test');
+// const data=localStorage;
 
-const txt=$('#txt');
-const btn=$('#btn');
-const test=$('#test');
-const data=localStorage;
-
-btn.on('click',()=>{
-    data.setItem('test',`${{name:txt.val(),age:23}}`);
-    const header=$(`<h1>${data}</h1>`);
-    header.appendTo(test);
-});
+// btn.on('click',()=>{
+//     data.setItem('test',`${{name:txt.val(),age:23}}`);
+//     const header=$(`<h1>${data}</h1>`);
+//     header.appendTo(test);
+// });
 // var testObject = { 'one': 1, 'two': 2, 'three': 3 };
 // localStorage.setItem('testObject', JSON.stringify(testObject));
 // data.clear();
 // console.log(data.key());
+
 
 
