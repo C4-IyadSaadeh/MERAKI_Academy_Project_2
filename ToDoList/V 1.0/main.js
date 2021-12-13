@@ -72,6 +72,28 @@ english.on("click", () => {
   $("#ar").remove();
   // $('link #ar').eq(1).remove();
 });
+btnRegister.on("click", () => {
+    if (
+      registerFirstName.val() !== "" &&
+      registerLastName.val() !== "" &&
+      registerEmail.val() !== "" &&
+      registerPassword.val() !== "" &&
+      registerConfirmPassword.val() !== ""
+    ) {
+      if (registerPassword.val() === registerConfirmPassword.val()) {
+        users.push({
+          firstName: registerFirstName.val(),
+          lastName: registerLastName.val(),
+          email: registerEmail.val(),
+          password: registerPassword.val(),
+        });
+        data.setItem("users", JSON.stringify(users));
+        alert(`Welcome ${registerFirstName.val()} ${registerLastName.val()}`);
+      } else if(registerPassword.val() !== registerConfirmPassword.val()) {
+        alert("The Password not match for Confirm Password Please Try Agin!");
+      }
+    }
+  });
 darkSpan.on("click", () => {
   // linkStyle.attr('href','arabicStyle.css');
   // html.attr('lang','ar');
