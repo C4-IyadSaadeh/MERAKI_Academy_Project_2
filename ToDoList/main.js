@@ -47,7 +47,7 @@ let user = JSON.parse(data.getItem("users"));
 let items = [];
 let item = JSON.parse(data.getItem("items"));
 btnSignIn.on("click", () => {
-  if (loginEmail.val() !== "" || loginPassword.val() !== "") {
+  if (loginEmail.val() !== "" && loginPassword.val() !== "") {
     for (const key in user) {
       const element = user[key];
       if (

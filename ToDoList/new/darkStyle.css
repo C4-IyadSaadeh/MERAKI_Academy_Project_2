@@ -47,6 +47,9 @@ header{
 #lightSpan{
     color: #595956
 }
+#lightSpan:hover{
+    color: #F2F2F2;
+}
 #fasla{
     color: #A6A6A4;
 }
@@ -56,16 +59,15 @@ header{
 #enSpan{
     color: #595956;
 }
+#arSpan:hover{
+    color:#F2F2F2 ;
+}
+#enSpan:hover{
+    color: #F2F2F2;
+}
 /*  main */
 /* Section First */
-.first{
-   
-/* dark gray: #595956
-gray : #8C8C88
-light gray : #A6A6A4
-white : #F2F2F2
-black : #0D0D0D */
-}
+
 .login{
     
     -webkit-box-shadow: 8px -3px 10px 3px rgba(0, 0, 0, 0.67);
@@ -81,6 +83,9 @@ black : #0D0D0D */
     color:#595956 ;
     
 }
+.logoo h1 span:hover{
+    color: #F2F2F2;
+}
 .tab a{
    
     border-top-color:#595956;
@@ -93,6 +98,9 @@ black : #0D0D0D */
     background-color: rgba(0, 0, 0, 0.205);
     color: #595956;
    
+}
+.tab a:hover{
+    color: #F2F2F2;
 }
 .tab-content{
    
