@@ -1,6 +1,10 @@
 const divlogin=$('#tab-content-login');
 const divregister=$('#tab-content-signUp');
-
+const arabic=$('#arSpan');
+const english=$('#enSpan');
+const html=$('html');
+const head=$('head');
+const linkStyle=$('<link rel="stylesheet" href="arabicStyle.css"/>');
 const logintab=$('#tab_signIn');
 const registertab=$('#tab_signUp');
 
@@ -37,4 +41,16 @@ body.on('load',HideAll());
 btnSignIn.on('click',()=>{
 sectionFirst.hide();
 hero.show();
+});
+arabic.on('click',()=>{
+    // linkStyle.attr('href','arabicStyle.css');
+    html.attr('lang','ar');
+    linkStyle.appendTo(head);
+});
+english.on('click',()=>{
+    html.attr('lang','en');
+    // head.remove(linkStyle);
+    // $('link').eq(1).remove();
+    // console.log($('link').eq(0));
+// linkStyle.hide();
 });

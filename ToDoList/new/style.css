@@ -31,32 +31,22 @@
     padding: 10px;
 }
 #darkSpan{
-    color:#285670 ;
+    color:#F2F0F2 ;
 }
 #lightSpan{
-    color: #429ca7
+    color: #DB006C
 }
 #fasla{
     color: black;
 }
 #arSpan{
-    color:#285670 ;
+    color:#DB006C ;
 }
 #enSpan{
-    color: #429ca7
+    color: #F2F0F2
 }
 
-.imgWelcome img{
-width: 300px;
-height: 500px;
-padding: 5px;
-object-fit: cover;
-/* border-top-left-radius: 10%;
-    border-top-right-radius: 16.9rem;
-    border-bottom-left-radius: 25.9rem;
-    border-bottom-right-radius: 36%; */
 
-}
 .login{
     /* width: 400px; */
     display: flex;
@@ -75,29 +65,29 @@ object-fit: cover;
     border-bottom-right-radius:90% ; */
 }
 header{
-    background-color: rgb(231 221 211);
+    background-color: #564F59;
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
     align-items: flex-start;
-    color: #429ca7;
+    color: #F2F0F2;
 }
 .logoo h1{
-    color:#285670 ;
+    color:#564F59 ;
     text-transform: uppercase; 
     font-size: 50px;
 }
 .logoo h1 span{
-    color:#429ca7 ;
+    color:#DB006C ;
     text-transform: uppercase; 
 }
 .logo h1{
-    color:#285670 ;
+    color:#F2F0F2 ;
     text-transform: uppercase; 
     
 }
 .logo h1 span{
-    color:#429ca7 ;
+    color:#DB006C ;
     text-transform: uppercase; 
 }
 ul{
@@ -139,8 +129,8 @@ margin-top: 10px;
     box-sizing: border-box;
 }
 .footer-container{
-    background-color: rgb(231 221 211);
-    color: black;
+    background-color: #564F59;
+    color: #F2F0F2;
     /* padding: 20px; */
     font-family:Georgia, 'Times New Roman', Times, serif ;
     /* margin-top: 10px;  */
