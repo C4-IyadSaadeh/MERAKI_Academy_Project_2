@@ -87,15 +87,15 @@ header{
 }
 .tab a{
     border-top: solid 1px;
-    border-top-color:blue;
+    /* border-top-color:blue; */
     border-right: solid 1px;
-    border-right-color:coral;
+    /* border-right-color:coral; */
     border-left: solid 1px;
-    border-left-color:yellowgreen;
+    /* border-left-color:yellowgreen; */
     
     font-size: 25px;
     font-weight: bold;
-    background-color: rgba(17, 248, 17, 0.205);
+    /* background-color: rgba(17, 248, 17, 0.205); */
     margin-left: 5px;
     box-sizing: border-box;
 }

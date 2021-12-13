@@ -7,12 +7,16 @@ white : #F2F2F2
 black : #0D0D0D
 */
 
+body{
+    background-color: #A6A6A4;
+}
 ul{
     list-style-type: none;
     }
     
     button{
-        background-color: #e8a4e8;
+        background-color: #A6A6A4;
+        color: #0D0D0D;
         font-size: 20px;
         font-weight: 700;
     }
@@ -20,7 +24,7 @@ ul{
 header{
     background-color: #0D0D0D;
     
-    color: #8C8C88;
+    color: #595956;
 }
 .logo h1{
     color:#F2F2F2 ;
@@ -28,55 +32,66 @@ header{
     
 }
 .logo h1 span{
-    color:#A6A6A4;
+    color:#595956;
     
 }
+.logo h1 span:hover{
+    color: #F2F2F2;
+}
 #darkSpan{
-    color:#F2F0F2 ;
+    color:#595956 ;
+}
+#darkSpan:hover{
+    color: #F2F2F2;
 }
 #lightSpan{
-    color: #DB006C
+    color: #595956
 }
 #fasla{
-    color: black;
+    color: #A6A6A4;
 }
 #arSpan{
-    color:#DB006C ;
+    color:#595956 ;
 }
 #enSpan{
-    color: #F2F0F2
+    color: #595956;
 }
 /*  main */
 /* Section First */
 .first{
    
-
+/* dark gray: #595956
+gray : #8C8C88
+light gray : #A6A6A4
+white : #F2F2F2
+black : #0D0D0D */
 }
 .login{
     
-    -webkit-box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
-    -moz-box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
-    box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
-    
+    -webkit-box-shadow: 8px -3px 10px 3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 8px -3px 10px 3px rgba(0, 0, 0, 0.67);
+    box-shadow: 8px -3px 10px 3px rgba(0, 0, 0, 0.67);
+    background-color: #0D0D0D;
 }
 .logoo h1{
-    color:#564F59 ;
+    color:#F2F2F2 ;
     
 }
 .logoo h1 span{
-    color:#DB006C ;
+    color:#595956 ;
     
 }
 .tab a{
    
-    border-top-color:blue;
+    border-top-color:#595956;
     
-    border-right-color:coral;
+    border-right-color:#595956;
     
-    border-left-color:yellowgreen;
+    border-left-color:#595956;
     
     
-    background-color: rgba(17, 248, 17, 0.205);
+    background-color: rgba(0, 0, 0, 0.205);
+    color: #595956;
    
 }
 .tab-content{
@@ -90,12 +105,16 @@ header{
   
 }
 #hero h1{
-    background-color: #f8f8f891;
+    background-color: #595956;
+    color: #F2F2F2;
    
 }
 /* footer */
+footer{
+    background-color: #0D0D0D;
+}
 .footer-container{
-    background-color: #564F59;
-    color: #F2F0F2;
+    background-color: #0D0D0D;
+    color: #595956;
     
 }

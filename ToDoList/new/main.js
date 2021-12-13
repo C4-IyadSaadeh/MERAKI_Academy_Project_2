@@ -1,10 +1,13 @@
 const divlogin=$('#tab-content-login');
 const divregister=$('#tab-content-signUp');
+const darkSpan=$('#darkSpan');
+const lightSpan=$('#lightSpan');
 const arabic=$('#arSpan');
 const english=$('#enSpan');
 const html=$('html');
 const head=$('head');
-const linkStyle=$('<link rel="stylesheet" href="arabicStyle.css"/>');
+const arabicLinkStyle=$('<link rel="stylesheet" href="arabicStyle.css"/>');
+const darkLinkStyle=$('<link rel="stylesheet" href="darkStyle.css"/>');
 const logintab=$('#tab_signIn');
 const registertab=$('#tab_signUp');
 
@@ -45,12 +48,22 @@ hero.show();
 arabic.on('click',()=>{
     // linkStyle.attr('href','arabicStyle.css');
     html.attr('lang','ar');
-    linkStyle.appendTo(head);
+    arabicLinkStyle.appendTo(head);
 });
 english.on('click',()=>{
     html.attr('lang','en');
     // head.remove(linkStyle);
-    // $('link').eq(1).remove();
-    // console.log($('link').eq(0));
-// linkStyle.hide();
+    $('link').eq(1).remove();
+    
+});
+darkSpan.on('click',()=>{
+    // linkStyle.attr('href','arabicStyle.css');
+    // html.attr('lang','ar');
+    darkLinkStyle.appendTo(head);
+});
+lightSpan.on('click',()=>{
+    // html.attr('lang','en');
+    // head.remove(linkStyle);
+    $('link').eq(1).remove();
+    
 });
