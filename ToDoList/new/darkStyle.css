@@ -1,0 +1,101 @@
+/* 
+main color
+dark gray: #595956
+gray : #8C8C88
+light gray : #A6A6A4
+white : #F2F2F2
+black : #0D0D0D
+*/
+
+ul{
+    list-style-type: none;
+    }
+    
+    button{
+        background-color: #e8a4e8;
+        font-size: 20px;
+        font-weight: 700;
+    }
+/* header style */
+header{
+    background-color: #0D0D0D;
+    
+    color: #8C8C88;
+}
+.logo h1{
+    color:#F2F2F2 ;
+   
+    
+}
+.logo h1 span{
+    color:#A6A6A4;
+    
+}
+#darkSpan{
+    color:#F2F0F2 ;
+}
+#lightSpan{
+    color: #DB006C
+}
+#fasla{
+    color: black;
+}
+#arSpan{
+    color:#DB006C ;
+}
+#enSpan{
+    color: #F2F0F2
+}
+/*  main */
+/* Section First */
+.first{
+   
+
+}
+.login{
+    
+    -webkit-box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
+    -moz-box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
+    box-shadow: 8px -3px 10px 3px rgba(212,85,212,0.67);
+    
+}
+.logoo h1{
+    color:#564F59 ;
+    
+}
+.logoo h1 span{
+    color:#DB006C ;
+    
+}
+.tab a{
+   
+    border-top-color:blue;
+    
+    border-right-color:coral;
+    
+    border-left-color:yellowgreen;
+    
+    
+    background-color: rgba(17, 248, 17, 0.205);
+   
+}
+.tab-content{
+   
+}
+.define-input input{
+    
+}
+/* section 2 'second' hero */
+#hero{
+  
+}
+#hero h1{
+    background-color: #f8f8f891;
+   
+}
+/* footer */
+.footer-container{
+    background-color: #564F59;
+    color: #F2F0F2;
+    
+}
