@@ -154,4 +154,51 @@ lightSpan.on("click", () => {
 
 // main function 
 // 1. User should be able to add a new toDo item to the toDos list.
+// 2.User should be able to view all added items.
+let items=[];
 
+const viewList=()=>{
+  items=JSON.parse(storage.getItem('items'));
+  for (const key in items) {
+    const element = items[key];
+    const card = $('<div class="card"></div>');
+    const cardHeader = $('<div class="card-header"></div>');
+    const cardBody = $('<div class="card-body"></div>');
+    const cardFooter = $('<div class="card-footer"></div>');
+
+    // review index2 in div cardheader
+    const header = $(
+      `<div><h3>${element.title}</h3><p>${element.Description}</p></div>`
+    );
+    // const footerOne = $(`<button id="modifyStep">Add Step</button>`);
+    const footertwo = $(`<button id="update">Edit</button>`);
+    const footerthree = $(`<button id="delete">Delete</button>`);
+    header.appendTo(cardHeader);
+    // footerOne.appendTo(cardFooter);
+    footertwo.appendTo(cardFooter);
+    footerthree.appendTo(cardFooter);
+    cardHeader.appendTo(card);
+    cardBody.appendTo(card);
+    cardFooter.appendTo(card);
+    card.appendTo(thridSection);
+  }
+};
+btnFinish.on('click',()=>{
+  if (
+    titleIdea.val() !== "" &&
+    descriptionIdea.val() !== "" &&
+    fromDate.val() !== "" &&
+    toDate.val() !== ""
+  ) {
+    items.push({
+      title: titleIdea.val(),
+      Description: descriptionIdea.val(),
+      from: fromDate.val(),
+      to: toDate.val(),state:'Pending'
+    });
+    storage.setItem("items", JSON.stringify(items));
+viewList();
+  }
+});
+
+// 3.User should be able to delete any added item.
