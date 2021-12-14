@@ -124,7 +124,7 @@ margin-top: 10px;
     grid-template-columns: 400px;
     justify-content: start;
     align-items: center;
-    background-image:url('../pic/bg3.jpg') ;
+    background-image:url('../V 0.0/pic/bg3.jpg') ;
     background-repeat: no-repeat;
     width: auto;
     height: 500px;
@@ -146,4 +146,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3,auto);
     gap: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

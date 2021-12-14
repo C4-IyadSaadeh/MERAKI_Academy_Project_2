@@ -110,7 +110,7 @@ header{
 }
 /* section 2 'second' hero */
 #hero{
-  
+    background-image:url('../V 0.0/pic/darkHero.png') ;
 }
 #hero h1{
     background-color: #595956;
