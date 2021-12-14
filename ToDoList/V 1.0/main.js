@@ -1,36 +1,37 @@
-const divlogin = $("#tab-content-login");
-const divregister = $("#tab-content-signUp");
+// بسم الله الرحمن الرحيم
+//Author : iyad Saadeh
+// Title :To Do List
+// version : 1.0.0
+
+// Local Storage
+const storage = this.localStorage;
+let users = [];
+//html and head tag
+
+const html = $("html");
+const head = $("head");
+// header 
 const darkSpan = $("#darkSpan");
 const lightSpan = $("#lightSpan");
 const arabic = $("#arSpan");
 const english = $("#enSpan");
-const html = $("html");
-const head = $("head");
 const arabicLinkStyle = $(
   '<link rel="stylesheet" id="ar" href="arabicStyle.css"/>'
 );
 const darkLinkStyle = $(
   '<link rel="stylesheet" id="dark" href="darkStyle.css"/>'
 );
-const logintab = $("#tab_signIn");
-const registertab = $("#tab_signUp");
-
-logintab.on("click", () => {
-  divlogin.show();
-  divregister.hide();
-});
-registertab.on("click", () => {
-  divlogin.hide();
-  divregister.show();
-});
-// Local Storage
-const storage = this.localStorage;
-let users = [];
+// Section First : login & register
 //login
 const sectionFirst = $(".first");
 const btnSignIn = $("#btnSignIn");
 const loginEmail = $("#loginEmail");
 const loginPassword = $("#loginPassword");
+const logintab = $("#tab_signIn");
+logintab.on("click", () => {
+  tabContentLogin.show();
+  tabContentSignUp.hide();
+});
 //register
 const btnRegister = $("#btnRegister");
 const registerFirstName = $("#registerFirstName");
@@ -40,21 +41,42 @@ const registerPassword = $("#registerPassword");
 const registerConfirmPassword = $("#registerConfirmPassword");
 const tabContentLogin = $("#tab-content-login");
 const tabContentSignUp = $("#tab-content-signUp");
-//section second
+const registertab = $("#tab_signUp");
+registertab.on("click", () => {
+  tabContentLogin.hide();
+  tabContentSignUp.show();
+});
+//section hero
 const hero = $("#hero");
-const sectionCards = $(".third");
+
+
+//section main_function
+const sectionMain=$('#main_function');
+const titleIdea = $("#titleIdea");
+const descriptionIdea = $("#descriptionIdea");
+const fromDate = $("#fromDate");
+const toDate = $("#toDate");
+const btnFinish = $("#finish");
+// section list_function
+const sectionCards = $("#list_function");
+//
 const body = $("body");
 const HideAll = () => {
-  for (const key in users) {
-    const element = users[key];
-    if (element.isActive === true) {
-      sectionFirst.hide();
-      hero.show();
-    }
-  }
-  divregister.hide();
+  // for (const key in users) {
+  //   const element = users[key];
+  //   if (element.isActive === true) {
+  //     sectionFirst.hide();
+  //     hero.show();
+  //   }
+  // }
+  tabContentSignUp.hide();
   hero.hide();
+  sectionMain.hide();
+  sectionCards.hide();
+
+
 };
+
 body.on("load", HideAll());
 btnSignIn.on("click", () => {
   // Don't Forget You have add SignOut Button.
@@ -67,7 +89,11 @@ btnSignIn.on("click", () => {
         loginPassword.val() === element.password
       ) {
         sectionFirst.hide();
+  viewList();
+
         hero.show();
+        sectionMain.show();
+  sectionCards.show();
       } else if (
         loginEmail.val() !== element.email &&
         loginPassword.val() !== element.password
@@ -173,19 +199,19 @@ const viewList = () => {
 
     // review index2 in div cardheader
     const header = $(
-      `<div><h3>${element.title}</h3><p>${element.Description}</p></div>`
+      `<div><h3>${element.title}</h3><h1>${element.Description}</h1></div>`
     );
     // const footerOne = $(`<button id="modifyStep">Add Step</button>`);
     const updatebtn = $(`<button id="update">Edit</button>`);
     const deletebtn = $(`<button id="delete">Delete</button>`);
-    header.appendTo(cardHeader);
+    header.appendTo(cardBody);
     // footerOne.appendTo(cardFooter);
     updatebtn.appendTo(cardFooter);
     deletebtn.appendTo(cardFooter);
     cardHeader.appendTo(card);
     cardBody.appendTo(card);
     cardFooter.appendTo(card);
-    card.appendTo(thridSection);
+    card.appendTo(sectionCards);
     // 3.User should be able to delete any added item.
     deletebtn.on("click", () => {
       items.forEach((item, index) => {
@@ -200,27 +226,52 @@ const viewList = () => {
     updatebtn.on("click", () => {
       items.forEach((item, index) => {
         if (element.title === item.title) {
+          const defineTitle=$('<div class="define-input"></div>');
+          const defineDes=$('<div class="define-input"></div>');
+          const defineFrom=$('<div class="define-input"></div>');
+          const defineTo=$('<div class="define-input"></div>');
+          const defineBtn=$('<div class="buttons"></div>');
+          const lblFrom=$('<label>From </label>');
+          const lblTo=$('<label>To </label>');
           const title = $(`<input type="text" value="${item.title}" />`);
           const des = $(`<textarea>${item.Description}</textarea>`);
           const from = $(`<input type="date" value="${item.from}"/>`);
           const to = $(`<input type="date" value="${item.to}"/>`);
+          const okBtn=$(`<button id="ok">Done</button>`);
           const editDiv = $('<div class="card_edit"></div>');
-          title.appendTo(editDiv);
-          des.appendTo(editDiv);
-          from.appendTo(editDiv);
-          to.appendTo(editDiv);
+          title.appendTo(defineTitle);
+          des.appendTo(defineDes);
+          lblFrom.appendTo(defineFrom);
+
+          from.appendTo(defineFrom);
+          lblTo.appendTo(defineTo);
+
+          to.appendTo(defineTo);
+
+          okBtn.appendTo(defineBtn);
+
+          defineTitle.appendTo(editDiv);
+          defineDes.appendTo(editDiv);
+          defineFrom.appendTo(editDiv);
+          defineTo.appendTo(editDiv);
+          defineBtn.appendTo(editDiv);
           editDiv.appendTo(sectionCards);
-          items[index] = {
-            title: title.val(),
-            Description: des.val(),
-            from: from.val(),
-            to: to.val(),
-            state: "Pending",
-          };
+          okBtn.on('click',()=>{
+            items[index] = {
+              title: title.val(),
+              Description: des.val(),
+              from: from.val(),
+              to: to.val(),
+              state: "Pending",
+
+            };
+            editDiv.remove();
+            storage.setItem("items", JSON.stringify(items));
+          });
+          
         }
       });
-      storage.setItem("items", JSON.stringify(items));
-      viewList();
+      
     });
   });
 };
