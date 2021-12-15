@@ -111,11 +111,18 @@ header{
 /* section 2 'second' hero */
 #hero{
     background-image:url('../V 0.0/pic/darkHero.png') ;
+    background-size:cover;
 }
 #hero h1{
     background-color: #595956a6;
     color: #F2F2F2;
    
+}
+.card{
+    background-color: #0D0D0D;
+box-shadow:4px 4px white;
+
+color: white;
 }
 /* footer */
 footer{

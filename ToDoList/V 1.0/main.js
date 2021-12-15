@@ -15,12 +15,10 @@ const darkSpan = $("#darkSpan");
 const lightSpan = $("#lightSpan");
 const arabic = $("#arSpan");
 const english = $("#enSpan");
-const arabicLinkStyle = $(
-  '<link rel="stylesheet" id="ar" href="arabicStyle.css"/>'
-);
-const darkLinkStyle = $(
-  '<link rel="stylesheet" id="dark" href="darkStyle.css"/>'
-);
+const arabicLinkStyle = $('<link rel="stylesheet" id="ar" href="arabicStyle.css"/>');
+const darkLinkStyle = $('<link rel="stylesheet" id="dark" href="darkStyle.css"/>');
+const divMenu=$('.menu_mobile');
+const btnMenu=$('#btn_menu_mobile');
 // Section First : login & register
 //login
 const sectionFirst = $(".first");
@@ -62,13 +60,7 @@ const sectionCards = $("#list_function");
 //
 const body = $("body");
 const HideAll = () => {
-  // for (const key in users) {
-  //   const element = users[key];
-  //   if (element.isActive === true) {
-  //     sectionFirst.hide();
-  //     hero.show();
-  //   }
-  // }
+ 
   tabContentSignUp.hide();
   hero.hide();
   sectionMain.hide();
@@ -200,12 +192,14 @@ const viewList = () => {
 
     // review index2 in div cardheader
     const header = $(
-      `<div><h3>${element.title}</h3><h1>${element.Description}</h1></div>`
+      `<h3>${element.title}</h3>`
     );
+    const des=$(`<h1>${element.Description}</h1>`);
     // const footerOne = $(`<button id="modifyStep">Add Step</button>`);
     const updatebtn = $(`<button id="update">Edit</button>`);
     const deletebtn = $(`<button id="delete">Delete</button>`);
-    header.appendTo(cardBody);
+    header.appendTo(cardHeader);
+    des.appendTo(cardBody);
     // footerOne.appendTo(cardFooter);
     updatebtn.appendTo(cardFooter);
     deletebtn.appendTo(cardFooter);
@@ -294,4 +288,29 @@ btnFinish.on("click", () => {
     storage.setItem("items", JSON.stringify(items));
     viewList();
   }
+});
+//extra Function 
+//  Add Blog include public think
+// 1.user can add comment & like  in blog .
+// 2.user can edit comment .
+// 3.user can remove like and comments.
+//  4.user can add blog post .
+// ----------
+// responsive
+btnMenu.on('click',()=>{
+  // divMenu
+  // darkSpan
+  // lightSpan
+  // arabic
+  // english
+  const ar=arabic;
+  const en=english;
+  const dark=darkSpan;
+  const light=lightSpan;
+  ar.appendTo(divMenu);
+  en.appendTo(divMenu);
+  dark.appendTo(divMenu);
+  light.appendTo(divMenu);
+  // ar.appendTo(divMenu);
+
 });
