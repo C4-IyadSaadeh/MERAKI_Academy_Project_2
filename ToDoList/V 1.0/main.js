@@ -73,7 +73,7 @@ const HideAll = () => {
   hero.hide();
   sectionMain.hide();
   sectionCards.hide();
-
+$('footer').css('position', 'absolute');
 
 };
 
@@ -94,6 +94,7 @@ btnSignIn.on("click", () => {
         hero.show();
         sectionMain.show();
   sectionCards.show();
+  $('footer').css('position', 'static');
       } else if (
         loginEmail.val() !== element.email &&
         loginPassword.val() !== element.password

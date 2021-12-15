@@ -1,3 +1,10 @@
+/* 
+#D90416
+#D9042B
+#F24968
+#F2F0F2
+#564F59
+*/
 *{
     margin: 0px;
     
@@ -13,9 +20,10 @@ ul{
     }
     
     button{
-        background-color: #e8a4e8;
+        background-color: #D90416;
         font-size: 20px;
         font-weight: 700;
+        color: #F2F0F2;
     }
 /* header style */
 header{
@@ -214,7 +222,8 @@ footer{
     display: grid;
     grid-template-columns: repeat(3,auto);
     gap: 20px;
-    position: fixed;
+    
+    /* position: static; */
     bottom: 0;
     width: 100%;
 }
