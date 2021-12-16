@@ -53,6 +53,12 @@ header{
 #fasla{
     color: #A6A6A4;
 }
+#complete{
+    color: #A6A6A4;
+  }
+  #complete:hover{
+    color: #F2F2F2;
+  }
 #arSpan{
     color:#595956 ;
 }

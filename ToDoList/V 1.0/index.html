@@ -13,29 +13,38 @@
     <title>GoodIdea</title>
   </head>
   <body>
-    <header>
+    
+    <header class="topnav" id="myTopnav">
       <div class="logo">
         <h1>Good<span>Idea</span></h1>
       </div>
-
+      <div id="google_translate_element"></div>
       <h2 class="theme">
         <span id="darkSpan">Dark</span>
         <span id="fasla">|</span>
         <span id="lightSpan">Light</span>
       </h2>
-      <h2 class="theme">
-        <span id="arSpan">AR</span>
-        <span id="fasla">|</span>
-        <span id="enSpan">En</span>
-      </h2>
+      
 
+      <h2 class="theme">
+        <span id="complete" >Complete Tasks</span>
+
+        <span id="arSpan">user </span>
+        <span id="enSpan">logOut</span>
+      </h2>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
       <div class="menu_mobile">
         <button id="btn_menu_mobile">☰</button>
       </div>
     </header>
     <main>
+      
+
       <section class="first">
         <div class="login">
+          
           <div class="logoo">
             <h1>Good <br /><span>Idea</span></h1>
           </div>
@@ -157,7 +166,9 @@
         <h5>Amman-jordan</h5>
       </div>
     </footer>
-
+    <!-- https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit -->
+    
+    <script type="text/javascript" src="translate.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
